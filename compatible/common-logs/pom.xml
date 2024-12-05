@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <!--<maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>-->
+        <java.home>${JAVA_HOME}</java.home>
+        <java.version>${JAVA_VERSION}</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -31,8 +31,11 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
+                    <compilerVersion>${java.version}</compilerVersion>
+                    <executable>${java.home}/bin/javac</executable>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -55,7 +58,8 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <java.version>21</java.version>
+                <JAVA_VERSION>21</JAVA_VERSION>
+                <JAVA_HOME>~/.jdks/azul-21.0.1</JAVA_HOME>
             </properties>
             <dependencies>
                 <dependency>
@@ -69,7 +73,8 @@
         <profile>
             <id>jdk8</id>
             <properties>
-                <java.version>1.8</java.version>
+                <JAVA_VERSION>1.8</JAVA_VERSION>
+                <JAVA_HOME>~/.jdks/azul-1.8.0_432</JAVA_HOME>
             </properties>
             <build>
                 <plugins>
