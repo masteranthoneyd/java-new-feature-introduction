@@ -4,6 +4,8 @@ import java.lang.reflect.Method;
 import java.util.Base64;
 
 /**
+ * 很多源码中都有多jdk版本兼容的 hardcode, ex: {@link org.apache.logging.log4j.util.StackLocator}, Spring Boot 中的 CommonAnnotationBeanPostProcessor
+ *
  * @author yangbingdong1994@gmail.com
  */
 public class Base64Util {
