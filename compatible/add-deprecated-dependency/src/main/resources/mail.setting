@@ -1,0 +1,5 @@
+host = smtp.yeah.net
+port = 25
+from = hutool@yeah.net
+user = hutool
+pass = q1w2e3
