@@ -59,7 +59,7 @@
             </activation>
             <properties>
                 <JAVA_VERSION>21</JAVA_VERSION>
-                <JAVA_HOME>~/.jdks/azul-21.0.1</JAVA_HOME>
+                <JAVA_HOME>~/.jdks/azul-21.0.5</JAVA_HOME>
             </properties>
             <dependencies>
                 <dependency>
